@@ -619,3 +619,151 @@ const myPlants = [
 
 const secondTree = myPlants[1].list[1];//Доступ к вложенным массивам
 
+
+// Setup
+const myArray = [];
+let i = 5;
+
+while (i >= 0){
+  myArray.push(i);
+  i--;
+}//Итерация с циклами while JavaScript
+
+const ourArray = [];
+
+for (let i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+//ourArrayтеперь будет иметь значение [0, 1, 2, 3, 4].
+
+const ourArray = [];
+
+for (let i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+}//ourArrayтеперь будет содержать [0, 2, 4, 6, 8]. Давайте изменим наш initialization, чтобы мы могли считать нечетными числами.
+
+const myArray = [];
+for (let i = 1; i < 10; i +=2){
+  myArray.push(i);
+}// нечетные числа до 10
+
+const myArray = [];
+for (let i = 9; i > 0; i-=2){
+  myArray.push(i);
+}//нечетные числа от 9 до 1
+
+const myArr = [2, 3, 4, 5, 6];
+let total = 0;
+for (let i = 0; i < myArr.length; i++) {
+  total += myArr[i];
+}//Перебор массива с помощью цикла for: Ответ 20
+
+const arr = [
+  [1, 2], [3, 4], [5, 6]
+];
+
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    console.log(arr[i][j]);
+  }
+}//Вложение циклов - Это выводит каждый подэлемент по arrодному за раз. 
+
+function multiplyAll(arr) {
+  let product = 1;
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    product = product * arr[i][j];
+  }
+}
+  return product;
+}
+
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]); // возвращала произведение всех чисел в подмассивах arr.
+
+// Setup
+const myArray = [];
+let i = 10;
+
+do {
+  myArray.push(i);
+  i++;
+} while (i < 5) //в отличии от while код будет исполнен хоотя бы один раз
+
+function multiply(arr, n) {
+  let product = 1;
+  for (let i = 0; i < n; i++) {
+    product *= arr[i];
+  }
+  return product;
+}//произведение первых n элементов
+//Однако обратите внимание на то multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]. Это означает, что вы можете переписать multiplyс точки зрения самого себя и вам никогда не понадобится использовать цикл.
+
+function multiply(arr, n) {
+  if (n <= 0) {
+    return 1;
+  } else {
+    return multiply(arr, n - 1) * arr[n - 1];
+  }
+}//Рекурсивная версия  произведение первых n элементов
+
+function sum(arr, n) {
+  if (n <= 0){
+    return 0;
+  } else {
+    return sum(arr, n-1) + arr[n - 1];
+  }}//Рекурсивная версия  сумма первых n элементов
+
+  function randomFraction() {
+    return Math.random();}//Создание случайных дробей с помощью JavaScript - между 0(включительно) и 1(исключительно)
+
+    function randomWholeNum() {
+      return Math.floor(Math.random() * 10);
+    }//Генерация случайных целых чисел с помощью JavaScript (от 0 до 9) -Math.floor()чтобы округлить число до ближайшего целого числа.
+
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+}//Генерировать случайные целые числа в диапазоне
+
+function convertToInteger(str) {
+  return parseInt(str);
+  }
+  convertToInteger("56");
+//Функция parseInt()анализирует строку и возвращает целое число. Вот пример:
+//const a = parseInt("007");
+
+function convertToInteger(str) {
+  return parseInt(str,2)
+  }
+convertToInteger("10011");//Используйте parseInt()в convertToIntegerфункции, чтобы она преобразовывала двоичное число в целое и возвращала его.
+
+function checkEqual(a, b) {
+  return a==b ? "Equal" : "Not Equal";
+}
+checkEqual(1, 2);//Синтаксис таков: a ? b : cгде a— условие, b— код, выполняемый при возврате условия true, и c— код, выполняемый при возврате условия false.
+//равны ли два числа или нет. Функция должна возвращать либо строку Equal, либо строку Not Equal.
+
+function findGreaterOrEqual(a, b) {
+  if (a === b) {
+    return "a and b are equal";
+  }
+  else if (a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater";
+  }
+}//тоже самое, что и код ниже
+
+function findGreaterOrEqual(a, b) {
+  return (a === b) ? "a and b are equal" 
+    : (a > b) ? "a is greater" 
+    : "b is greater";
+}//тоже самое, что и код выше
+
+function checkSign(num) {
+  return (num === 0) ? "zero"
+    : (num > 0) ? "positive"
+    : "negative";
+}
+checkSign(10); // проверка положительное или отрицательное или равно 0
+
